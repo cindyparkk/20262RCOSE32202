@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eae4f6">
+  <meta name="description" content="Meet your tiny study buddy. Feed a tiger, take a nap, catch a few bugs. A cozy operating system for doing your best.">
+  <title>Tiger.exe — tiny paws, big processes</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="polish.css">
+  <script defer src="app.js"></script>
+  <script defer src="snacks.js"></script>
+  <script defer src="nap.js"></script>
+  <script defer src="bugs.js"></script>
+  <script defer src="memory.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#playground">Skip to tiger</a>
+  <header class="menubar">
+    <a class="brand" href="./" aria-label="Tiger.exe home"><span class="paw-logo">✿</span> tiger.exe <span class="version">v1.0</span></a>
+    <div class="menu-right"><span class="system-state"><i></i> All systems purring</span><button id="sound-toggle" aria-pressed="false" title="Toggle sound">♫ <span>Sound off</span></button><time id="clock">00:00</time></div>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <div class="intro-copy"><div class="intro-tag"><span class="tiny-star">✦</span> Your emotional support process</div><h1 id="title">Tiny paws.<br>Big processes.</h1><p>Meet your new study buddy. Mostly helpful.<br>Occasionally asleep on the keyboard.</p></div>
+      <div class="intro-note"><span>note to self</span><p>You don’t have to be<br>productive to be<br><strong>purrfect.</strong></p><div>♡</div></div>
+    </section>
+    <section class="workspace" id="playground" aria-label="Tiger desktop">
+      <div class="window buddy-window">
+        <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>tiger.exe</span><span class="window-symbol" aria-hidden="true">↗</span></div>
+        <div class="scene" id="scene">
+          <div class="scene-top"><span class="pill" id="mood"><i></i> In my coding era</span><span class="room-label">a little space to just be</span></div>
+          <div class="sparkle s-one" aria-hidden="true">✦</div><div class="sparkle s-two" aria-hidden="true">✧</div><div class="sparkle s-three" aria-hidden="true">✧</div>
+          <div class="speech" id="speech" role="status">I have no idea what I’m doing.<br>But look at my little laptop.</div>
+          <div class="tiger-area"><div class="tiger-shadow"></div><button class="tiger" id="tiger" aria-label="Pet the tiger"><span class="tiger-crop"><img src="assets/tiger-original.png" alt="Cute orange System Software Lab tiger sitting with a laptop" width="510" height="440" draggable="false"></span></button><div class="sleep-bubbles" aria-hidden="true">z <span>z</span> <b>Z</b></div><div id="particles" aria-hidden="true"></div></div>
+          <span class="pet-hint" id="pet-hint">↑ a little head pat goes a long way</span>
+          <div class="scene-floor"><span>♡ made of stripes & good intentions</span><span id="session-label">cozy mode</span></div>
+        </div>
+        <div class="care-controls" aria-label="Tiger activities">
+          <button id="feed"><span class="control-icon">🍪</span><strong>Snack break</strong><small>Fuel the little guy</small></button>
+          <button id="nap"><span class="control-icon">☾</span><strong>Power nap</strong><small>Sleep is a feature</small></button>
+          <button id="debug"><span class="control-icon">✳</span><strong>Catch bugs</strong><small>Actual debugging</small></button>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <section class="window vitals"><div class="window-bar"><span>little life dashboard</span><span aria-hidden="true">♡</span></div><div class="vitals-body"><div class="buddy-id"><span class="avatar">🐯</span><div><h2>Just a little guy.</h2><p id="buddy-description">Doing his absolute medium.</p></div><span class="online-dot" title="Tiger is here"></span></div>
+          <div class="stat"><div><label for="energy">Energy</label><span id="energy-value">72%</span></div><progress id="energy" value="72" max="100">72%</progress></div>
+          <div class="stat happiness"><div><label for="happiness">Happiness</label><span id="happiness-value">85%</span></div><progress id="happiness" value="85" max="100">85%</progress></div>
+          <div class="stat snacks"><div><label for="fullness">Snack capacity</label><span id="fullness-value">48%</span></div><progress id="fullness" value="48" max="100">48%</progress></div>
+          <p class="vitals-foot">CPU: cute processing unit <span>100%</span></p></div></section>
+        <section class="window terminal"><div class="window-bar"><span>~ / tiny-thoughts</span><span class="terminal-light"></span></div><div class="terminal-body"><p class="terminal-heading">tigerOS [version 1.0.0]</p><p class="terminal-start">Booting up a very good day...</p><ol id="log" aria-label="Activity log"><li><span>›</span> tiny paws connected</li><li><span>›</span> big feelings initialized</li><li><span>›</span> awaiting snacks<span class="cursor">_</span></li></ol></div></section>
+        <section class="sticky"><span class="sticky-pin" aria-hidden="true"></span><span class="sticky-title">Today’s tiny reminder</span><p id="reminder">Even the best processes<br>need a little idle time.</p><button id="new-reminder" aria-label="Show another reminder">another little thought <span>↻</span></button></section>
+      </aside>
+    </section>
+    <section class="bottom-strip" aria-label="Session achievements"><div><span class="mini-flower">✿</span><span>A little care goes a long way.</span></div><div class="counters"><span><b id="pats-count">0</b> head pats</span><span><b id="snacks-count">0</b> snacks shared</span><span><b id="bugs-count">0</b> bugs caught</span><button id="reset" title="Reset this tiger’s saved progress">Fresh start ↻</button></div></section>
+    <footer><span>tiger.exe <span class="footer-sep">/</span> a tiny experiment in being kinder to yourself.</span><a href="https://github.com/cindyparkk/20262RCOSE32202" target="_blank" rel="noreferrer">Peek at the code <span aria-hidden="true">↗</span></a></footer>
+  </main>
+  <dialog id="bug-dialog" aria-labelledby="game-title"><div class="game-header"><div><span class="game-eyebrow">tiny pest control</span><h2 id="game-title">It’s a feature. It has legs.</h2></div><button id="close-game" aria-label="Close bug game">×</button></div><p>Catch 5 bugs before the 20-second timer runs out.<br>Click, tap, or focus a bug and press Enter.</p><div class="game-stats"><span id="game-score">0 / 5 bugs</span><span id="game-time">20s</span></div><div id="bug-field" class="bug-field"></div><p id="game-message" role="status">Ready for some very literal debugging?</p><button id="start-game" class="primary-button">Let’s debug</button></dialog>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><h2 id="reset-title">A fresh little start?</h2><p>This resets your tiger’s stats and counters on this browser.</p><div class="dialog-actions"><button id="cancel-reset">Keep my tiger</button><button id="confirm-reset" class="primary-button">Reset progress</button></div></dialog>
+</body>
+</html>
