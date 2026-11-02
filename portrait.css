@@ -1,0 +1,8 @@
+/* The 2 × 2 source sheet stays intact; each cell is one crisp pose. */
+.scene { height: 450px; }
+.tiger-area { height: 258px; }
+.tiger { height: 250px; mix-blend-mode: normal; }
+.tiger-crop { width: 250px; height: 250px; margin: 0 auto; }
+.tiger img { width: 200%; height: 200%; left: 0; top: 0; max-width: none; }
+.tiger-shadow { bottom: 10px; left: 44px; right: 44px; }
+@media (max-width: 850px) { .scene { height: 450px; } }

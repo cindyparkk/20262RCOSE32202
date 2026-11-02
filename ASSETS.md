@@ -1,5 +1,7 @@
 # Artwork
 
-`assets/tiger-original.png` is the unmodified reference image supplied by the user. It includes the System Software Lab wordmark. The interactive portrait uses a CSS viewport to show the tiger; no replacement illustration or altered raster was generated.
+`assets/tiger-original.png` is the unmodified reference supplied by the user, including the System Software Lab wordmark. Ownership remains with its original creator; this student project is not an official lab website.
 
-This student project is not an official System Software Lab website. No ownership or license to the supplied artwork is asserted. Other visual elements are CSS and system emoji. DM Sans and Space Grotesk load from Google Fonts; system fonts are used if the network is unavailable.
+`assets/tiger-sprites.png` is an AI recreation generated with the built-in image-generation tool from that reference. The website displays one quadrant at a time: neutral (top left), typing (top right), waving (bottom left), and sleeping (bottom right). The sheet is 1254 × 1254 pixels (627 × 627 per pose), rendered at 250 × 250 CSS pixels, providing 2.5× pixel density. The PNG retains its transparent background and is displayed below its native resolution for crisp high-density screens. The original is retained for attribution and comparison.
+
+Generation prompt: see `assets/tiger-sprites-prompt.txt`. Other elements use CSS and system emoji. DM Sans and Space Grotesk load from Google Fonts with system-font fallbacks.
