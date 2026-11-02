@@ -13,3 +13,12 @@ Serve the folder with `python3 -m http.server 4173` and open http://localhost:41
 All counters represent play in this browser. The website does not create GitHub commits or claim to read repository history.
 
 Verified in headless Chrome on 2026-11-02: pet, feed, reload persistence, sleep/wake, keyboard game completion, timer expiry, Escape, reset/cancel, 390px overflow, reduced motion, and no JavaScript page errors.
+
+## High-resolution animation checks
+
+- The sprite sheet loads at 1254 × 1254 pixels with alpha; each pose occupies 627 × 627 pixels and renders at 250 × 250 CSS pixels.
+- Idle typing alternates the first two frames. Head pats select the waving pose, snacks select the typing/munching pose, and naps select the closed-eye pose.
+- Beginning a nap cancels pending reaction timers. Waking or resetting returns to idle.
+- A game win triggers a victory wiggle. Closing the game leaves care controls usable.
+- Pause motion stops animations without disabling care controls. Play motion resumes them. Reduced-motion preference stops animation and disables the toggle; disabling that preference restores the chosen setting.
+- Verify no horizontal overflow at 390px, no clipped sprite, and no JavaScript errors.

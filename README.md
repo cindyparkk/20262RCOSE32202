@@ -20,3 +20,9 @@ The tiger artwork was supplied for this project and bears the System Software La
 The activity counters are local play statistics, not GitHub commit counts. Nothing is sent to a server. Google Fonts is the only external page resource, with system-font fallbacks.
 
 Source: plain HTML, CSS, and JavaScript. See `ASSETS.md` for artwork notes and `TESTING.md` for the verification checklist.
+
+## A tiger with moves
+
+The tiger uses a transparent 1254 × 1254 sprite sheet recreated from the reference. Each 627px pose renders at 250 CSS pixels for crisp 2× screens. It switches between typing poses, waves after a head pat, munches during snacks, sleeps with closed eyes, and does a victory wiggle after catching five bugs.
+
+Use **Pause motion** inside the tiger window to stop animation while continuing to play. Device reduced-motion settings are respected, and animation stops while the tab is hidden. All poses come from one image request; the full generation prompt is recorded in `assets/tiger-sprites-prompt.txt`.

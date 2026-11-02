@@ -15,3 +15,8 @@
 @keyframes victory-wiggle { 0%, 100% { transform: translateX(0) rotate(0); } 25% { transform: translate(-12px, -8px) rotate(-8deg); } 75% { transform: translate(12px, -8px) rotate(8deg); } }
 @keyframes sleepy-breath { 50% { transform: translateY(3px) scale(1.015, .985); } }
 @media (prefers-reduced-motion: reduce) { #tiger img, #tiger .tiger-crop { animation: none !important; } }
+.motion-toggle { background: transparent; color: #786b60; font-family: var(--mono); font-size: 10px; padding: 7px 4px; border-radius: 5px; }
+.motion-toggle:hover { background: #eee6da; }
+.motion-toggle:disabled { cursor: default; opacity: 1; }
+.motion-paused *, .motion-paused *::before, .motion-paused *::after { animation: none !important; transition: none !important; }
+.motion-paused .particle { display: none; }
