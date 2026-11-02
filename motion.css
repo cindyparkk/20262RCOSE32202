@@ -1,0 +1,17 @@
+/* Pose changes animate the drawing; the clickable button itself stays still. */
+.tiger:hover, .tiger:active { transform: none; }
+#tiger[data-pose="idle"] img { animation: tiny-typing 1.4s steps(1, end) infinite; }
+#tiger[data-pose="wave"] img, #tiger[data-pose="dance"] img { transform: translate(0, -50%); }
+#tiger[data-pose="snack"] img { transform: translate(-50%, 0); }
+#tiger[data-pose="sleep"] img { transform: translate(-50%, -50%); }
+#tiger[data-pose="wave"] .tiger-crop { animation: happy-wave .5s ease-in-out 3; }
+#tiger[data-pose="snack"] .tiger-crop { animation: happy-munch .3s ease-in-out 5; }
+#tiger[data-pose="dance"] .tiger-crop { animation: victory-wiggle .7s ease-in-out 3; }
+#tiger[data-pose="sleep"] .tiger-crop { animation: sleepy-breath 3s ease-in-out infinite; }
+#tiger[data-pose="sleep"] { filter: none; }
+@keyframes tiny-typing { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-50%, 0); } }
+@keyframes happy-wave { 0%, 100% { transform: rotate(-3deg); } 50% { transform: translateY(-8px) rotate(3deg); } }
+@keyframes happy-munch { 50% { transform: translateY(3px) scale(1.025, .975); } }
+@keyframes victory-wiggle { 0%, 100% { transform: translateX(0) rotate(0); } 25% { transform: translate(-12px, -8px) rotate(-8deg); } 75% { transform: translate(12px, -8px) rotate(8deg); } }
+@keyframes sleepy-breath { 50% { transform: translateY(3px) scale(1.015, .985); } }
+@media (prefers-reduced-motion: reduce) { #tiger img, #tiger .tiger-crop { animation: none !important; } }

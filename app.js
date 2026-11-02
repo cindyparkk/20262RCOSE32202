@@ -6,7 +6,6 @@
   let asleep = false;
   let sound = false;
   let audio;
-  let animationTimer;
   const phrases = [
     'Head pat received. Serotonin successfully compiled.',
     'I’m not procrastinating. I’m in the ready queue.',
@@ -15,6 +14,7 @@
     'No thoughts. Just threads.',
     'The only race condition here is to the snack drawer.'
   ];
+  function move(pose) { window.dispatchEvent(new CustomEvent('tigermotion', { detail: pose })); }
   function say(message) { $('speech').textContent = message; }
   function log(message) {
     const li = document.createElement('li');
@@ -71,11 +71,7 @@
     state.happiness += 4;
     say(phrases[(state.pats - 1) % phrases.length]);
     log(`head pat #${state.pats}: serotonin++`);
-    $('tiger').classList.remove('petting');
-    void $('tiger').offsetWidth;
-    $('tiger').classList.add('petting');
-    clearTimeout(animationTimer);
-    animationTimer = setTimeout(() => $('tiger').classList.remove('petting'), 550);
+    move('wave');
     burst(); beep(); render();
   });
   $('sound-toggle').addEventListener('click', () => {
@@ -90,9 +86,9 @@
     $('clock').dateTime = now.toISOString();
   }
   clock(); setInterval(clock, 10000);
-  window.Tiger = { $, defaults, state, say, log, render, burst, beep,
+  window.Tiger = { $, defaults, state, say, log, render, burst, beep, move,
     get asleep() { return asleep; },
-    set asleep(value) { asleep = value; }
+    set asleep(value) { asleep = value; move(value ? 'sleep' : 'idle'); }
   };
   render();
 })();

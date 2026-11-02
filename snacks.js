@@ -15,7 +15,7 @@
     T.state.happiness += 6;
     T.say(['Cookie accepted. Terms and crumbs apply.', 'Finally. A byte I can actually eat.', 'This is what I call a cache hit.'][(T.state.snacks - 1) % 3]);
     T.log(`cookie #${T.state.snacks} successfully devoured`);
-    T.burst('🍪', 4); T.beep(450); T.render();
+    T.move('snack'); T.burst('🍪', 4); T.beep(450); T.render();
     timer = setTimeout(finish, 750);
   });
   window.addEventListener('tigerreset', finish);

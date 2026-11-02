@@ -29,6 +29,7 @@
         finish('All clear! Your code is now 100% bug-ish free.');
         T.say('Five bugs caught. Promoting myself to senior tiger.');
         T.log('5 bugs squashed. tiny promotion earned');
+        T.move('dance');
         T.$('start-game').focus();
       } else spawn();
     });
